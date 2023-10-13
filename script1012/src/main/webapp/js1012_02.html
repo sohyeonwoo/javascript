@@ -9,8 +9,10 @@
 			function siteBtn(){
 				//site= document.querySelector("site");
 				site= document.querySelector('input[name="site"]:checked').value;
+				//input을 가져오려면 value
+				//input 외 , 다른 코드에서 가져오려면 innerText / innerHTMl
 				console.log(site);
-				alert(site);
+				alert(site+"페이지로 이동합니다.");
 				
 				switch(site){
 					case"구글": url="http://www.google.com";

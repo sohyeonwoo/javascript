@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>날짜함수</title>
+		<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+			//2002.4.30 부터 지금까지 며칠이 지났는지 확인하는 방법
+			var today = new Date(); //현재날짜
+			var wday = new Date(2023,4,30);
+			var result = today.getTime() - wday.getTime();
+			//result를 날짜로 변경 - 1000*60*60*24 로 나누면 일자를 알 수 있음.
+			var last_day = Math.ceil (result/(1000*60*60*24));
+			//var last_day1= Math.floor (last_day/365) //년
+			//var last_day2 = last_day%365 //일
+		
+			alert(" " +last_day + "지났습니다.");
+			//alert(" " +last_day1 +"년"+last_day2+ "일 지났습니다.");
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

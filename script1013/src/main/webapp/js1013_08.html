@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Array</title>
+	</head>
+	<body>
+		<script>
+			var arr = new Array();
+			var arr2 = new Array(1,2,3) ;
+			var arr3 = [1,2,3] ;
+			
+			//기존 배열이나 출력문구에서 삭제 , 추가 , 지정삭제 및 지정추가 명령어
+			arr.push(1);
+			arr.push(3);
+			arr.push(5);
+			arr2.push(4); // 기존 순서 맨뒤에 추가됨 push 추가하는 명령어.
+			arr.pop(); // 출력했을때 1,3,5라는 숫자중에 가장 마지막에 출력되는 것을 삭제한다는 명령 "pop"
+			arr2.unshift(5); // 5라는 숫자는 맨 앞에 추가됨 (추가 명령어) // 5,1,2,3,4 순서
+			arr2.splice(2,0,10,11) //2번째 자리에 10 , 11을 추가한다는 소리 . (,0,은 추가한다는 명령)
+			arr3.splice(1,1); // 1번째 있는 숫자를 삭제한다는 명령(,0,이 없으면 삭제한다는 명령)
+			//splice 는 삭제와 추가가 가능한 명령어
+			arr3[5] = 10;
+			arr2.shift()// 제일 첫번째 숫자를 삭제하는 명령어
+			
+			document.write(arr,"<br>");
+			document.write(arr2,"<br>");
+			document.write(arr3,"<br>");
+			document.write(arr3.length,"<br>");
+		</script>
+	
+	</body>
+</html>
