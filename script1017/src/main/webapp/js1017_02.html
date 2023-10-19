@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		<meta charset="UTF-8">
+	<title>함수</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<style>
+		*{margin: 0; padding: 0;}
+		div{margin: 0 auto;margin-top: 30px;}
+		.top{width: 700px; height: 60px; text-align: center; font-size: 20px;
+		font-weight: 700; cursor: pointer; border: 3px solid black;}
+		.back{ width:700px; height: 700px;background: url('images/ko1.jpg') 
+				}
+	</style>
+	<script>
+			var img = ["ko2","ko1","ko3","ko4","ko5"] //전역변수
+			var i = 0;
+		function c_change(){
+			var f_img = "url('images/"+img[i%5]+"')";
+			$(".back").css("background",f_img); //제이쿼리 구문
+			if(i==5) i=0;
+			// document.querySelector(".back").style.backgroundColor = color[i]; //자바스크립트 구문
+			
+			i++;
+			
+		}
+	</script>
+	</head>
+	<body>
+		<section>
+			<div class="top" onclick="c_change()">사진</div>
+			<div class="back"><img src="images/ko1.jpg"> </div>
+		</section>
+	
+	</body>
+</html>
